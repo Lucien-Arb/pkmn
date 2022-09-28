@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <section class="hero is-link">
+        <div class="hero-body columns">
+            <div class="column">
+                <p class="title">
+                    Pokémon Go !
+                </p>
+                <p class="subtitle">
+                    Où ça ?...
+                </p>
+            </div>
+
+            <figure class="image is-128x128">
+                <img class="is-rounded" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/6.png">
+            </figure>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="columns is-flex" id="container" style="flex-wrap: wrap;">
+            <template id="pokemonList">
+                <div class="column" style="min-width: 250px;">
+                    <div class="card">
+                        <div class="card-image" style="cursor:pointer;">
+                            <figure class="image is-4by3">
+                                <img src="" alt="Placeholder image" class="front" id="pkmnImg">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4" id="pkmnName"></p>
+                                <p class="subtitle is-6" id="pkmnType"></p>
+                            </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column">
+                                    <div class="dropdown is-hoverable">
+                                        <div class="dropdown-trigger">
+                                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                                <span>Details</span>
+                                                <span class="icon is-small">
+                                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                            <div class="dropdown-content">
+                                                <div class="dropdown-item">
+                                                    <p class="subtitle is-6"  id="pkmnNbMoves"></p>
+                                                    <hr>
+                                                    <p class="subtitle is-6"  id="pkmnHeight"></p>
+                                                    <hr>
+                                                    <p class="subtitle is-6"  id="pkmnXp"></p>
+                                                    <hr>
+                                                    <p class="subtitle is-6"  id="pkmnWeight"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column card-infos">
+                                    <figure class="image is-48x48 is-flex">
+                                        <img class="is-rounded" src=""  id="pkmnImgShiny">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="module" src="/js/app.js"></script>
+<script type="module" src="/js/pokemon.js"></script>
+</html>

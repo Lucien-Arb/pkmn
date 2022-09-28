@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <title>Pokédex</title>
 </head>
 <body>
+    <!-- HEADER -->
     <section class="hero is-link">
         <div class="hero-body columns">
             <div class="column">
@@ -26,14 +27,27 @@
         </div>
     </section>
 
-
+    <!-- BOUTONS -->
     <section class="section">
+        <div class="buttons is-centered">
+            <button class="button is-info" id="game" onclick="ToggleGame()">Game</button>
+            <button class="button is-danger" id="pokedex" onclick="ToggleGame()">Pokédex</button>
+          </div>
+    </section>
+
+    <!-- GAME -->
+    <section class="section is-hidden" id="displayGame">
+        <p>Mon jeux !</p>
+    </section>
+
+    <!-- POKEDEX -->
+    <section class="section" id="displayPokedex">
         <div class="columns is-flex" id="container" style="flex-wrap: wrap;">
             <template id="pokemonList">
                 <div class="column" style="min-width: 250px;">
                     <div class="card">
                         <div class="card-image" style="cursor:pointer;">
-                            <figure class="image is-4by3">
+                            <figure class="image mx-auto" style="object-fit: contain!important; width: 150px!important;">
                                 <img src="" alt="Placeholder image" class="front" id="pkmnImg">
                             </figure>
                         </div>
@@ -82,7 +96,6 @@
             </div>
         </div>
     </section>
-
 
 </body>
 

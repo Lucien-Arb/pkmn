@@ -1,10 +1,31 @@
+let pokedexBtn = document.getElementById('pokedex');
+let gameBtn = document.getElementById('game');
+let displayPokedex = document.getElementById('displayPokedex');
+let displayGame = document.getElementById('displayGame');
+let togglePokedex = true
+let toggleGame = false
+
+export function ToggleGame () {
+    if (!toggleGame) {
+        displayGame.classList.remove("is-hidden")
+        displayPokedex.classList.add("is-hidden")
+        toggleGame = true
+    } else {
+        displayGame.classList.add("is-hidden")
+        displayPokedex.classList.remove("is-hidden")
+        toggleGame = false
+    }
+}
+
+pokedexBtn.onclick = ToggleGame
+gameBtn.onclick = ToggleGame
+
 export function getOnePokemon(pokemonUrl) {
     for (const pokemon of pokemonUrl) {
         // try {
             fetch(pokemon.url)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
                 drawOnePokemon(data)
             }) 
         // } catch (error) {
@@ -13,6 +34,9 @@ export function getOnePokemon(pokemonUrl) {
         
     }
 }
+
+
+
 
 function drawOnePokemon(pokemon) {
     let template = document.getElementById("pokemonList");

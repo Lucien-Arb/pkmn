@@ -1,15 +1,15 @@
 export function getOnePokemon(pokemonUrl) {
     for (const pokemon of pokemonUrl) {
-        try {
+        // try {
             fetch(pokemon.url)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
                 drawOnePokemon(data)
             }) 
-        } catch (error) {
-            console.log("test errorr : " , error)
-        }
+        // } catch (error) {
+        //     console.log("test errorr : " , error)
+        // }
         
     }
 }

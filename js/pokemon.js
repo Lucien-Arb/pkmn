@@ -22,21 +22,13 @@ gameBtn.onclick = ToggleGame
 
 export function getOnePokemon(pokemonUrl) {
     for (const pokemon of pokemonUrl) {
-        // try {
-            fetch(pokemon.url)
-            .then(response => response.json())
-            .then(data => {
-                drawOnePokemon(data)
-            }) 
-        // } catch (error) {
-        //     console.log("test errorr : " , error)
-        // }
-        
+        fetch(pokemon.url)
+        .then(response => response.json())
+        .then(data => {
+            drawOnePokemon(data)
+        }) 
     }
 }
-
-
-
 
 function drawOnePokemon(pokemon) {
     let template = document.getElementById("pokemonList");

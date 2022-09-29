@@ -1,4 +1,4 @@
-td {
+.map-back {
     background-image: url(../assets/Hautes_herbes_RB.png);
     border: 3px solid #666!important;
     width: 150px!important;
@@ -14,4 +14,29 @@ td {
     border: 3px solid #666!important;
     width: 150px!important;
     height: 150px!important;
+}
+
+.fightWindow {
+    border: 2px solid #333!important;
+    width: 700px!important;
+    height: 500px!important;
+}
+
+.pkmn-fight-name {
+    font-size: 2.5em!important;
+    font-weight: 900!important;
+}
+
+.pkmn-fight-lvl {
+    font-size: 1.5em!important;
+    font-weight: 700!important;
+}
+
+.pkmn-fight-hp {
+    font-size: 1.5em!important;
+    font-weight: 700!important;
+}
+
+.pkmn-fight-img {
+    width: 200%!important;
 }

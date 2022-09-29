@@ -26,7 +26,7 @@ export function getOnePokemon(pokemonUrl) {
         .then(response => response.json())
         .then(data => {
             drawOnePokemon(data)
-        }) 
+        })
     }
 }
 

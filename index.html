@@ -38,34 +38,76 @@
 
     <!-- GAME -->
     <section class="section is-hidden" id="displayGame">
-        <div class="table-container ">
+        <div class="table-container">
             <table class="table mx-auto is-bordered">
                 <tr>
-                    <td class="p-6" id="C00"></td>
-                    <td class="p-6" id="C01"></td>
-                    <td class="p-6" id="C02"></td>
-                    <td class="p-6" id="C03"></td>
+                    <td class="p-6 map-back" id="C00"></td>
+                    <td class="p-6 map-back" id="C01"></td>
+                    <td class="p-6 map-back" id="C02"></td>
+                    <td class="p-6 map-back" id="C03"></td>
                 </tr>
                 <tr>
-                    <td class="p-6" id="C10"></td>
-                    <td class="p-6" id="C11"></td>
-                    <td class="p-6" id="C12"></td>
-                    <td class="p-6" id="C13"></td>
+                    <td class="p-6 map-back" id= map-back"C10"></td>
+                    <td class="p-6 map-back" id="C11"></td>
+                    <td class="p-6 map-back" id="C12"></td>
+                    <td class="p-6 map-back" id="C13"></td>
                 </tr>
                 <tr>
-                    <td class="p-6" id="C20"></td>
-                    <td class="p-6" id="C21"></td>
-                    <td class="p-6" id="C22"></td>
-                    <td class="p-6" id="C23"></td>
+                    <td class="p-6 map-back" id="C20"></td>
+                    <td class="p-6 map-back" id="C21"></td>
+                    <td class="p-6 map-back" id="C22"></td>
+                    <td class="p-6 map-back" id="C23"></td>
                 </tr>
                 <tr>
-                    <td class="p-6" id="C30"></td>
-                    <td class="p-6" id="C31"></td>
-                    <td class="p-6" id="C32"></td>
-                    <td class="p-6" id="C33"></td>
+                    <td class="p-6 map-back" id="C30"></td>
+                    <td class="p-6 map-back" id="C31"></td>
+                    <td class="p-6 map-back" id="C32"></td>
+                    <td class="p-6 map-back" id="C33"></td>
                 </tr>
             </table>
           </div>
+    </section>
+
+    <!-- FIGHT -->
+    <section class="section is-hidden" id="displayFight">
+        <div id="containerFight">
+            <template id="fight">
+                <table class="table mx-auto fightWindow" >
+                    <tr id="containerEnnemi">
+                        <template id="displayEnnemi">
+                            <td class="p-6" id="F00">
+                                <p id="ennemiName" class="pkmn-fight-name"></p>
+                                <p id="ennemiLvl" class="pkmn-fight-lvl"></p>
+                                <p id="ennemiHP" class="pkmn-fight-hp"></p>
+                            </td>
+                            <td class="p-6" id="F01">
+                                <figure class="image mx-auto" style="object-fit: contain!important; width: 150px!important;">
+                                    <img src="" alt="Placeholder image" class="front pkmn-fight-img" id="ennemiImg">
+                                </figure>
+                            </td>
+                        </template>
+                    </tr>
+                    <tr id="containerMyPkmn">
+                        <template id="displayMyPkmn">
+                            <td class="p-6" id="F10">
+                                <figure class="image mx-auto" style="object-fit: contain!important; width: 150px!important;">
+                                    <img src="" alt="Placeholder image" class="front pkmn-fight-img" id="myPkmnImg">
+                                </figure>
+                            </td>
+                            <td class="p-6" id="F11">
+                                <p id="myPkmnName" class="pkmn-fight-name"></p>
+                                <p id="myPkmnLvl" class="pkmn-fight-lvl"></p>
+                                <p id="myPkmnHP" class="pkmn-fight-hp"></p>
+                            </td>
+                        </template>
+                    </tr>
+                    <tr class="dresseurDashboard">
+                        <td class="p-6" id="F20"></td>
+                        <td class="p-6" id="F21"></td>
+                    </tr>
+                </table>
+            </template>
+        </div>
     </section>
 
     <!-- POKEDEX -->

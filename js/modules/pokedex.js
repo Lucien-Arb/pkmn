@@ -1,24 +1,25 @@
-let pokedexBtn = document.getElementById('pokedex');
-let gameBtn = document.getElementById('game');
+let pokedexOrMap = document.getElementById('pokedexOrMap');
+let switchPages = document.getElementById('switchPages');
 let displayPokedex = document.getElementById('displayPokedex');
 let displayGame = document.getElementById('displayGame');
-let togglePokedex = true
-let toggleGame = false
+let togglePokedexOrMap = true
+pokedexOrMap.innerText = "Pokédex"
 
 export function ToggleGame () {
-    if (!toggleGame) {
+    if (!togglePokedexOrMap) {
         displayGame.classList.remove("is-hidden")
         displayPokedex.classList.add("is-hidden")
-        toggleGame = true
+        togglePokedexOrMap = true
+        pokedexOrMap.innerText = "Map"
     } else {
         displayGame.classList.add("is-hidden")
         displayPokedex.classList.remove("is-hidden")
-        toggleGame = false
+        togglePokedexOrMap = false
+        pokedexOrMap.innerText = "Pokédex"
     }
 }
 
-pokedexBtn.onclick = ToggleGame
-gameBtn.onclick = ToggleGame
+switchPages.onclick = ToggleGame
 
 export function getOnePokemon(pokemonUrl) {
     for (const pokemon of pokemonUrl) {

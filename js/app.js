@@ -1,4 +1,6 @@
-import { getOnePokemon } from "./pokemon.js";
+import "./modules/movement.js";
+
+import { getOnePokemon } from "./modules/pokedex.js";
 
 let offset = 0
 let limit = 30

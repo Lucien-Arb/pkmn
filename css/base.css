@@ -24,17 +24,17 @@
 
 .pkmn-fight-name {
     font-size: 2.5em!important;
-    font-weight: 900!important;
+    font-weight: 700!important;
 }
 
 .pkmn-fight-lvl {
     font-size: 1.5em!important;
-    font-weight: 700!important;
+    font-weight: 500!important;
 }
 
 .pkmn-fight-hp {
     font-size: 1.5em!important;
-    font-weight: 700!important;
+    font-weight: 500!important;
 }
 
 .pkmn-fight-img {

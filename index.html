@@ -75,7 +75,7 @@
                     <tr id="containerEnnemi">
                         <template id="displayEnnemi">
                             <td class="p-6" id="F00">
-                                <p id="ennemiName" class="pkmn-fight-name"></p>
+                                <p id="ennemiName" class="pkmn-fight-name  is-capitalized"></p>
                                 <p id="ennemiLvl" class="pkmn-fight-lvl"></p>
                                 <p id="ennemiHP" class="pkmn-fight-hp"></p>
                             </td>
@@ -94,23 +94,24 @@
                                 </figure>
                             </td>
                             <td class="p-6" id="F11">
-                                <p id="myPkmnName" class="pkmn-fight-name"></p>
+                                <p id="myPkmnName" class="pkmn-fight-name  is-capitalized"></p>
                                 <p id="myPkmnLvl" class="pkmn-fight-lvl"></p>
                                 <p id="myPkmnHP" class="pkmn-fight-hp"></p>
                             </td>
                         </template>
                     </tr>
                     <tr class="dresseurDashboard">
+                        <p id="fight-text-zone" class="is-size-4 has-text-centered	has-text-weight-bold"></p>
                         <td class="p-6 " id="F20">
                             <div class="is-flex is-justify-content-space-evenly is-flex-direction-column">
-                                <button class="button is-primary mb-2 has-text-weight-bold is-size-4">Attack 1</button>
-                                <button class="button is-link mt-2 has-text-weight-bold is-size-4">Attack 2</button>
+                                <button class="button is-primary mb-2 has-text-weight-bold is-size-5 is-capitalized" id="attack-1"></button>
+                                <button class="button is-link mt-2 has-text-weight-bold is-size-5 is-capitalized" id="attack-2"></button>
                             </div>
                         </td>
                         <td class="p-6 " id="F21">
                             <div class="is-flex is-justify-content-space-evenly is-flex-direction-column">
-                                <button class="button is-info mb-2 has-text-weight-bold is-size-4">Attack 3</button>
-                                <button class="button is-danger mt-2 has-text-weight-bold is-size-4">Attack 4</button>
+                                <button class="button is-info mb-2 has-text-weight-bold is-size-5 is-capitalized" id="attack-3"></button>
+                                <button class="button is-danger mt-2 has-text-weight-bold is-size-5 is-capitalized" id="attack-4"></button>
                             </div>
                         </td>
                     </tr>

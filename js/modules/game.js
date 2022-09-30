@@ -1,3 +1,7 @@
+import { Fight } from "./fight.js"
+
+export let fight = null;
+
 // Initialisation du joueur
 export function Player(name, posX, posY, image) {
     this.name = name  
@@ -30,8 +34,17 @@ async function startFight () {
     }
     removeMap.classList.add("is-hidden")
     printFightContainer();
-    fetchPkmnEnnemi().then(data => {pkmnEnnemi(data)})
-    fetchPkmnEnnemi().then(data => {myPkmn(data)})
+    let pkmnEnnemiPromise = fetchPkmnEnnemi().then(data => {
+        return pkmnEnnemi(data);
+    })
+    let myPkmnPromise = fetchPkmnEnnemi().then(data => {
+        return myPkmn(data);
+    })
+    let allPromises = Promise.all([pkmnEnnemiPromise, myPkmnPromise])
+    .then(data => {
+        fight = new Fight(data[0], data[1])
+        fight.whosFirst(data[0], data[1])
+    })
 }
 
 function sleep(ms) {
@@ -61,7 +74,7 @@ async function printFightContainer() {
     containerFight.appendChild(templateFightClone);
 }
 
-async function pkmnEnnemi(ennemi) {
+function pkmnEnnemi(ennemi) {
     let templateDisplayEnnemi = document.getElementById("displayEnnemi");
     let templateDisplayEnnemiClone = templateDisplayEnnemi.content.cloneNode(true);
     let containerEnnemi = document.getElementById("containerEnnemi");
@@ -72,7 +85,7 @@ async function pkmnEnnemi(ennemi) {
 
     // Lvl du pokemon ennemi
     let ennemiLvl = templateDisplayEnnemiClone.getElementById("ennemiLvl");
-    ennemiLvl.innerText = ennemi.base_experience
+    ennemiLvl.innerText = "XP : " + ennemi.base_experience
 
     // Lvl du pokemon ennemi
     let ennemiHP = templateDisplayEnnemiClone.getElementById("ennemiHP");
@@ -84,6 +97,7 @@ async function pkmnEnnemi(ennemi) {
 
     // Append le template
     containerEnnemi.appendChild(templateDisplayEnnemiClone);
+    return ennemi;
 }
 
 function myPkmn(pkmn) {
@@ -97,7 +111,7 @@ function myPkmn(pkmn) {
 
     // Lvl du pokemon ennemi
     let pkmnLvl = templateMyPkmnClone.getElementById("myPkmnLvl");
-    pkmnLvl.innerText = pkmn.base_experience
+    pkmnLvl.innerText = "XP : " + pkmn.base_experience
 
     // Lvl du pokemon pkmn
     let pkmnHP = templateMyPkmnClone.getElementById("myPkmnHP");
@@ -108,5 +122,6 @@ function myPkmn(pkmn) {
     pkmnImg.src = pkmn.sprites.back_default
 
     containerMyPkmn.appendChild(templateMyPkmnClone);
+    return pkmn;
 }
 

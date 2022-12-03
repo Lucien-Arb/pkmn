@@ -1,4 +1,4 @@
-import {Player, fightOrNot} from './game.js';
+import {Player, fightOrNot} from 'https://lucien34000.github.io/pkmn/js/modules/game.js';
 
 // Initialisation du joueur
 let player = new Player('Sacha', 0, 0, '<img id="img-dresseur" src="https://lucien34000.github.io/pkmn/assets/sacha-pikachu.png" width="200%">')

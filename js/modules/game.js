@@ -1,4 +1,4 @@
-import { Fight } from "./fight.js"
+import { Fight } from "https://lucien34000.github.io/pkmn/js/modules/fight.js"
 
 export let fight = null;
 

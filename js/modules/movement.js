@@ -1,7 +1,7 @@
 import {Player, fightOrNot} from './game.js';
 
 // Initialisation du joueur
-let player = new Player('Sacha', 0, 0, '<img id="img-dresseur" src="assets/ sacha-pikachu.png" width="200%">')
+let player = new Player('Sacha', 0, 0, '<img id="img-dresseur" src="https://lucien34000.github.io/pkmn/assets/sacha-pikachu.png" width="200%">')
 document.getElementById('C' + player.posX + player.posY ).innerHTML = player.image
 
 document.onkeydown = checkKey;

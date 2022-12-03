@@ -2,7 +2,7 @@
   "name": "js-tp",
   "version": "1.0.0",
   "description": "",
-  "main": "js/app.js",
+  "main": "https://lucien34000.github.io/pkmn/js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
